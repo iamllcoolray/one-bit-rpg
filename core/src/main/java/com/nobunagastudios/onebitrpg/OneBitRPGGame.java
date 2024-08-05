@@ -6,6 +6,8 @@ import com.nobunagastudios.onebitrpg.screens.GameScreen;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class OneBitRPGGame extends Game {
+    public static final int V_WIDTH = 400;
+    public static final int V_HEIGHT = 208;
     public SpriteBatch batch;
 
     @Override
