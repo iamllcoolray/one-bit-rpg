@@ -7,6 +7,7 @@ import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.nobunagastudios.onebitrpg.OneBitRPGGame;
+import com.nobunagastudios.onebitrpg.scenes.Hud;
 
 /** First screen of the application. Displayed after the application is created. */
 public class GameScreen implements Screen {
@@ -14,11 +15,13 @@ public class GameScreen implements Screen {
     private Texture texture;
     private OrthographicCamera gameCamera;
     private Viewport gamePort;
+    private Hud hud;
     public GameScreen(OneBitRPGGame game){
         this.game = game;
         texture = new Texture("libgdx.png");
         gameCamera = new OrthographicCamera();
         gamePort = new FitViewport(OneBitRPGGame.V_WIDTH, OneBitRPGGame.V_HEIGHT, gameCamera);
+        hud = new Hud(game.batch);
     }
 
     @Override
@@ -30,10 +33,8 @@ public class GameScreen implements Screen {
     public void render(float delta) {
         // Draw your screen here. "delta" is the time since last render in seconds.
         ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f);
-        game.batch.setProjectionMatrix(gameCamera.combined);
-        game.batch.begin();
-        game.batch.draw(texture, 0, 0);
-        game.batch.end();
+        game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
+        hud.stage.draw();
     }
 
     @Override
