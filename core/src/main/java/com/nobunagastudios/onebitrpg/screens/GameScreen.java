@@ -12,13 +12,11 @@ import com.nobunagastudios.onebitrpg.scenes.Hud;
 /** First screen of the application. Displayed after the application is created. */
 public class GameScreen implements Screen {
     private OneBitRPGGame game;
-    private Texture texture;
     private OrthographicCamera gameCamera;
     private Viewport gamePort;
     private Hud hud;
     public GameScreen(OneBitRPGGame game){
         this.game = game;
-        texture = new Texture("libgdx.png");
         gameCamera = new OrthographicCamera();
         gamePort = new FitViewport(OneBitRPGGame.V_WIDTH, OneBitRPGGame.V_HEIGHT, gameCamera);
         hud = new Hud(game.batch);

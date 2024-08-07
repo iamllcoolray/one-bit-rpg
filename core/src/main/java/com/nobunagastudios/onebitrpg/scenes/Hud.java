@@ -20,13 +20,13 @@ public class Hud {
     Label countLabel;
     Label scoreLabel;
     Label timeLabel;
-    Label areaLabel;
+    Label levelLabel;
     Label mapLabel;
     Label adventurerLabel;
 
     public Hud(SpriteBatch batch){
-        worldTime = 0;
-        timeCount = 2400;
+        worldTime = 300;
+        timeCount = 0;
         score = 0;
 
         viewport = new FitViewport(OneBitRPGGame.V_WIDTH, OneBitRPGGame.V_HEIGHT, new OrthographicCamera());
@@ -36,19 +36,19 @@ public class Hud {
         table.top();
         table.setFillParent(true);
 
-        countLabel = new Label(String.format("%04d", worldTime), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        scoreLabel = new Label(String.format("%06d", score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        timeLabel = new Label("TIME", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        areaLabel = new Label("Level 1", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        mapLabel = new Label("MAP", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         adventurerLabel = new Label("ADVENTURER", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        scoreLabel = new Label(String.format("%06d", score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        timeLabel = new Label("TIMER", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        countLabel = new Label(String.format("%03d", worldTime), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        mapLabel = new Label("MAP", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        levelLabel = new Label("Level 1", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
 
         table.add(adventurerLabel).expandX().pad(10);
         table.add(mapLabel).expandX().pad(10);
         table.add(timeLabel).expandX().pad(10);
         table.row();
         table.add(scoreLabel).expandX();
-        table.add(areaLabel).expandX();
+        table.add(levelLabel).expandX();
         table.add(countLabel).expandX();
 
         stage.addActor(table);
