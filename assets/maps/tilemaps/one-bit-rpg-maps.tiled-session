@@ -1,0 +1,32 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "castlevania-2-tilesheet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "castlevania-maps-tilesheet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "/Users/nobunaga/Dropbox/source/game-dev/games/2d/learning/one-bit-rpg/assets/maps/tilesheets",
+    "openFiles": [
+    ],
+    "project": "one-bit-rpg-maps.tiled-project",
+    "recentFiles": [
+        "castlevania-2-tilesheet.tsx",
+        "castlevania-maps-tilesheet.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.margin": 1,
+    "tileset.spacing": 1,
+    "tileset.transparentColor": "#84c7ae",
+    "tileset.useTransparentColor": false
+}
