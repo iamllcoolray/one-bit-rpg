@@ -17,6 +17,10 @@
         }
     },
     "last.imagePath": "/Users/nobunaga/Dropbox/source/game-dev/games/2d/learning/one-bit-rpg/assets/maps/tilesheets",
+    "map.height": 20,
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": "3",
+    "map.width": 120,
     "openFiles": [
     ],
     "project": "one-bit-rpg-maps.tiled-project",
